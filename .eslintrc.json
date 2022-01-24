@@ -1,0 +1,18 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "extends": ["airbnb-base", "prettier"],
+  "parserOptions": {
+    "sourceType": "script",
+    "ecmaVersion": 12,
+    "ecmaFeatures": {
+      "impliedStrict": false
+    }
+  },
+  "rules": {
+    "strict": ["error", "global"]
+  }
+}
