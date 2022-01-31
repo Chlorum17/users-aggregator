@@ -1,4 +1,4 @@
-# Rest-server users-aggregator
+# REST users-aggregator
 
 ## Краткое оглавнение
 
@@ -7,10 +7,10 @@
 
 ## Запуск проекта
 
-1. Склонировать репозиторий командой _git clone https://github.com/Chlorum17/users-aggregator.git_
-2. Установить зависимости командой _npm ci --only=production --ignore-scripts_ или _npm i_
-3. Выполнить команду _docker-compose up -d_ или для подключения к своей БД - поменять содержимое _.env_ файла в корне проекта
-4. Запустить проект командой _npm start_ или _npm run dev_
+1. Склонировать репозиторий командой **git clone https://github.com/Chlorum17/users-aggregator.git**
+2. Установить зависимости командой **npm ci --only=production --ignore-scripts** или **npm i**
+3. Выполнить команду **docker-compose up -d** или для подключения к своей БД - поменять содержимое **.env** файла в корне проекта
+4. Запустить проект командой **npm start** или **npm run dev**
 
 ## Описание эндпоинтов
 
