@@ -6,20 +6,17 @@ const { pg } = require('../../db');
 
 const userService = {
   async getUsers({ first_name, last_name }) {
-    const query =
-      !first_name && !last_name
-        ? { text: `SELECT * FROM users` }
-        : {
-            text: `
-            SELECT * FROM users
-            WHERE
-              (first_name = $1 AND last_name = $2)
-              OR
-              first_name = $1
-              OR
-              last_name = $2`,
-            values: [first_name, last_name],
-          };
+    const query = {
+      text: 'SELECT * FROM users',
+    };
+
+    if (first_name || last_name) {
+      query.values = [first_name, last_name];
+
+      const operator = first_name && last_name ? 'AND' : 'OR';
+
+      query.text = `${query.text} WHERE first_name = $1 ${operator} last_name = $2`;
+    }
 
     const { rows } = await pg.query(query);
     return rows;
