@@ -1,4 +1,4 @@
 {
-  "./{src,config,logger,db}/**/*.js": ["eslint", "prettier --write"],
-  "./{src,config,logger,db}/**/*.json": ["prettier --write"]
+  "./src/**/*.js": ["eslint", "prettier --write"],
+  "./src/**/*.json": ["prettier --write"]
 }
